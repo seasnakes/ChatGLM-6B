@@ -18,7 +18,7 @@ def torch_gc():
 # 创建FastAPI实例
 app = FastAPI()
 
-
+# 挂载到"/"路由下
 @app.post("/")
 async def create_item(request: Request):
     global model, tokenizer
@@ -33,7 +33,7 @@ async def create_item(request: Request):
     max_length = json_post_list.get('max_length')
     top_p = json_post_list.get('top_p')
     temperature = json_post_list.get('temperature')
-    #定义http 返回体 内容为模型推理完后的结果
+    #定义http 返回体中主体部分 内容为模型推理完后的结果
     response, history = model.chat(tokenizer,
                                    prompt,
                                    history=history,
@@ -43,16 +43,19 @@ async def create_item(request: Request):
     #时间戳
     now = datetime.datetime.now()
     time = now.strftime("%Y-%m-%d %H:%M:%S")
+    #answer封装完整的http响应 模型生成 历史记录 状态码 时间
     answer = {
         "response": response,
         "history": history,
         "status": 200,
         "time": time
     }
+    #日志
     log = "[" + time + "] " + '", prompt:"' + prompt + '", response:"' + repr(response) + '"'
     print(log)
     #pytorch的垃圾回收
     torch_gc()
+    #将answer 作为http响应返回
     return answer
 
 
