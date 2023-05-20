@@ -17,10 +17,11 @@
 * [ChatGLM-web](https://github.com/NCZkevin/chatglm-web)：基于FastAPI和Vue3搭建的ChatGLM演示网站(支持chatglm流式输出、前端调整模型参数、上下文选择、保存图片、知识库问答等功能)
 * [ChatGLM-6B-Engineering](https://github.com/LemonQu-GIT/ChatGLM-6B-Engineering)：基于 ChatGLM-6B 后期调教，网络爬虫及 [Stable Diffusion](https://github.com/AUTOMATIC1111/stable-diffusion-webui) 实现的网络搜索及图片生成
 * [ChatGLM-OpenAI-API](https://github.com/ninehills/chatglm-openai-api): 将 ChatGLM-6B 封装为 OpenAI API 风格，并通过 ngrok/cloudflare 对外提供服务，从而将 ChatGLM 快速集成到 OpenAI 的各种生态中。
+* [ChatSQL](https://github.com/yysirs/ChatSQL): 基于ChatGLM+SBERT实现NL2SQL本地化，并直接连接数据库查询数据返回结果，使得生成的SQL语句更具有实用性。
 
 对 ChatGLM-6B 进行微调的开源项目：
 * [InstructGLM](https://github.com/yanqiangmiffy/InstructGLM)：基于ChatGLM-6B进行指令学习，汇总开源中英文指令数据，基于Lora进行指令数据微调，开放了Alpaca、Belle微调后的Lora权重，修复web_demo重复问题
-* [ChatGLM-Efficient-Tuning](https://github.com/hiyouga/ChatGLM-Efficient-Tuning)：基于ChatGLM-6B模型进行定制化微调，汇总10余种指令数据集和3种微调方案，实现了4/8比特量化和模型权重融合，提供微调模型快速部署方法。
+* [ChatGLM-Efficient-Tuning](https://github.com/hiyouga/ChatGLM-Efficient-Tuning)：实现了ChatGLM-6B模型的监督微调和完整RLHF训练，汇总10余种指令数据集和3种微调方案，实现了4/8比特量化和模型权重融合，提供微调模型快速部署方法。
 * [ChatGLM-Finetuning](https://github.com/liucongg/ChatGLM-Finetuning)：基于ChatGLM-6B模型，进行下游具体任务微调，涉及Freeze、Lora、P-tuning等，并进行实验效果对比。
 * [ChatGLM-Tuning](https://github.com/mymusise/ChatGLM-Tuning): 基于 LoRA 对 ChatGLM-6B 进行微调。类似的项目还包括 [Humanable ChatGLM/GPT Fine-tuning | ChatGLM 微调](https://github.com/hscspring/hcgf)
 
@@ -28,3 +29,6 @@
 针对 ChatGLM-6B 的教程/文档：
 * [Windows部署文档](https://github.com/ZhangErling/ChatGLM-6B/blob/main/deployment_windows.md)
 * [搭建深度学习docker容器以运行 ChatGLM-6B - Luck_zy](https://www.luckzym.com/tags/ChatGLM-6B/)
+
+如果你有其他好的项目/教程的话，欢迎参照上述格式添加到 README 中并提出 [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)。
+
